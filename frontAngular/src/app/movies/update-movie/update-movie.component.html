@@ -17,9 +17,9 @@
         </div>
         <div class="form-group">
           <label for="releaseDate">Date de sortie :</label>
-          <input type="date" class="form-control" id="releaseDate" [(ngModel)]="movie.releaseDate" name="releaseDate">
+          <input type="date" class="form-control" id="releaseDate" [(ngModel)]="releaseDateStr" name="releaseDate" [ngModelOptions]="{standalone: true}" (input)="updateReleaseDate($event)">
         </div>
-        <button class="btn btn-primary my-4" (click)="addMovie()">Ajouter</button>
+        <button class="btn btn-primary my-4" (click)="updateMovie()">Modifier</button>
       </form>
     </div>
   </div>
